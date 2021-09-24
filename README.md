@@ -1,7 +1,9 @@
 # namecheap-dydns
 simple Python script to dynamically update the host's IP with an HTTP request to namecheap.com 
 
-Requirements:
+## Requirements:
+Python3 and requests lib.
+
 ```bash
 pip install requests
 ```
@@ -25,9 +27,24 @@ This script could be configured to run automatically in background to keep your 
 
 
 ```cronjob
-*/15 * * * * /usr/bin/python /<PATH_TO_SRC>/namecheap-dydns/namecheap_dydns.py -H <yourhost> -d <yourdomain.com> -p <yourpassword>
+*/15 * * * * /usr/local/bin/python3 /<PATH_TO_SRC>/namecheap-dydns/namecheap_dydns.py -H <yourhost> -d <yourdomain.com> -p <yourpassword>
 ```
 
 ### Credits:
 
 This script use https://ifconfig.me service to determine your public IPv4 address.
+
+### Expected output:
+
+```bash
+Your public ip is 186.118.90.255
+request https dynamic host update...
+
+Command SETDNSHOST
+Language eng
+IP 186.118.90.255
+ErrCount 0
+ResponseCount 0
+Done true
+debug None
+```
