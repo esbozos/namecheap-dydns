@@ -41,7 +41,7 @@ def main(argv):
         print('arguments must be provided')
         print_usage()
         sys.exit(2)
-    print(opts)
+
     for o, a in opts:
         if o == '-h':
             print_usage()
